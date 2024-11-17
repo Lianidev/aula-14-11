@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: aquamarine;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    #app {
+      background-color: lightgreen;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+   
+    }
+     button {
+      padding: 8px 16px;
+      font-size: 14px;
+      margin: 8px;
+      background-color: turquoise;
+    }
+  </style>
+  <title>digite uma palavra para inverter</title>
+</head>
+<body>
+
+
+  <div id="app">
+
+
+    <h2>Inverter Sequência</h2>
+
+
+   
+    <input type="text" id="inputTexto" placeholder="Digite uma sequência de caracteres">
+
+
+   
+    <button onclick="inverterTexto()">Inverter Texto</button>
+
+
+   
+    <p id="resultado"></p>
+  </div>
+
+
+
+
+  <script>
+    function inverterTexto() {
+     
+      const texto = document.getElementById('inputTexto').value;
+     
+     
+      const textoInvertido = texto.split('').reverse().join('');
+     
+   
+      document.getElementById('resultado').textContent = "Resultado: " + textoInvertido;
+    }
+  </script>
+</body>
+</html>
+
